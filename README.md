@@ -19,3 +19,6 @@ Finally, point your browser to:
 
     http://localhost:3000
 
+Updating changes to local index.js:
+
+    npm run pack
