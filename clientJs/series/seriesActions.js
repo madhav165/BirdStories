@@ -1,5 +1,5 @@
 'use strict';
-import  Constants from './seriesConstants';
+import Constants from './seriesConstants';
 import Server from '../util/server';
 import SA from '../util/analytics';
 
