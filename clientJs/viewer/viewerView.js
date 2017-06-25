@@ -165,7 +165,7 @@ class View extends Component {
 
   storyLoaded(){
     this.markAsView()
-    document.title = this.props.story.name + " -"+window.getString("companyPromo");
+    document.title = this.props.story.name + " - "+window.getString("companyPromo");
     window.onbeforeunload = () => {
         var name = this.props.story.name.removeSpaceAndCapitals();
         SA.sendEvent('Story','close',name);

@@ -77,7 +77,7 @@ class View extends Component {
 
       if( 0 > document.title.indexOf(author.penName)){
         var title = 'profile-'+author.penName
-        document.title = author.penName + " -"+window.getString("companyPromo");
+        document.title = author.penName + " - "+window.getString("companyPromo");
         SA.sendPageView(title,title);
         window.onbeforeunload = () => {
             var name = this.props.story.name.removeSpaceAndCapitals();

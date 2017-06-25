@@ -7,7 +7,7 @@ class WritersInfo extends Component {
 
   componentDidMount() {
     window.scrollTo(0, 0)
-    document.title = window.getString("WritersInfo") + " -"+window.getString("companyPromo");
+    document.title = window.getString("WritersInfo") + " - "+window.getString("companyPromo");
     SA.sendPageView('writersInfo');
 
     window.onbeforeunload = () => {
