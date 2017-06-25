@@ -7,7 +7,7 @@ class Competition extends Component {
 
   componentDidMount() {
     window.scrollTo(0, 0)
-    document.title = window.getString("Competition") + " -"+window.getString("companyPromo");
+    document.title = window.getString("Competition") + " - "+window.getString("companyPromo");
     SA.sendPageView('competition');
 
     window.onbeforeunload = () => {

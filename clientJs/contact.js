@@ -6,7 +6,7 @@ class Contact extends Component {
 
   componentDidMount() {
     window.scrollTo(0, 0)
-    document.title = window.getString("contactUs") + " -"+window.getString("companyPromo");
+    document.title = window.getString("contactUs") + " - "+window.getString("companyPromo");
     SA.sendPageView('contactUs');
     window.onbeforeunload = () => {
         SA.sendEvent('ContactUs','close','contactUs');
