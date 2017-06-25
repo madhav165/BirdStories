@@ -7,6 +7,10 @@ After installing node.js and npm, clone "BirdStories" and install dependencies:
     cd BirdStories
     npm install
 
+Configure AWS. If you are on Ubuntu:
+
+    aws configure
+
 Next, launch the development web server:
 
     npm start
