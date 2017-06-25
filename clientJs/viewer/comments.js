@@ -1,7 +1,7 @@
 'use strict';
 import React, { Component } from 'react';
 import styles from '../css/comments.css';
-import CommentBox from './CommentBox';
+import CommentBox from './commentBox';
 
 
 class View extends Component {

@@ -3,7 +3,7 @@ import React from 'react';
 import styles from '../css/footer.css';
 import Social from '../util/social.js';
 import { Link } from 'react-router';
-import CommentBox from './CommentBox';
+import CommentBox from './commentBox';
 
 const View = ({story,authorLink, updateSocial,publishComment})=>{
   var shareUrl = window.location.href;
