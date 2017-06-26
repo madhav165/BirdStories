@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import Controller from './seriesController';
 import Viewer from './viewerController';
 import Store from './seriesStore';
-import  Actions from './seriesActions';
+import Actions from './seriesActions';
 import { Provider } from 'react-redux';
 
 class Series extends Component {

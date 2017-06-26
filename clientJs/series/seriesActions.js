@@ -206,9 +206,9 @@ function getSeriesContent(authorId,name,episodeNumber){
 
 function seriesDetailsSuccess(data){
 
-  // if(!data || !data.timestamp){
-  //   window.location.replace("/")
-  // }
+  if(!data || !data.timestamp){
+    window.location.replace("/")
+  }
   return {
     type:Constants.SeriesDetailsSuccess,
     series:data,

@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import Controller from './storiesController';
 import Viewer from './viewerController';
 import Store from './storiesStore';
-import  Actions from './storiesActions';
+import Actions from './storiesActions';
 import { Provider } from 'react-redux';
 
 class Stories extends Component {

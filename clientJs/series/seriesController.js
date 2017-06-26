@@ -6,7 +6,9 @@ import SA from '../util/analytics';
 const mapStateToProps = (state) => {
   return {
     seriesList: state.seriesList,
-    isFetching:state.isFetching
+    isFetching:state.isFetching,
+    reachedEnd:state.reachedEnd
+
   }
 }
 
