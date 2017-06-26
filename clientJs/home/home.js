@@ -11,7 +11,7 @@ class Home extends Component {
 
   constructor(props){
     super(props)
-    this.state = { imageStatus: false,index:0 };
+    this.state = { imageStatus: true,index:0 };
     this.changeTab =  this.changeTab.bind(this);
   }
 
@@ -56,7 +56,7 @@ class Home extends Component {
 
     var seriesDivison = <div className="homeSeries"><Series location={this.props.location}/></div>
     if(this.state.index == 0){
-      seriesDivison = <div className="homeSeries mobileHide"><Series className="mobileHide" location={this.props.location}/></div>
+      seriesDivison = <div className="homeSeries mobileHide"><Series class="mobileHide" location={this.props.location}/></div>
     }
 
 
