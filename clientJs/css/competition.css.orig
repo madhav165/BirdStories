@@ -103,6 +103,18 @@
 }
 
 .competition img.winnerPhoto {
+<<<<<<< HEAD
+    width: 10rem;
+    height: 10rem;
+}
+
+.competition div.authorInfo {
+    float: left;
+    margin-top: 1rem;
+    display: block;
+}
+
+=======
     width: 25%;
     height: 25%;
     border-radius: 50%;
@@ -124,26 +136,40 @@
 
 
 
+>>>>>>> 28282f409c6fade486125121f46fdb5fdf0e19f7
 .competition div.storyName {
     color: #d12767;
     text-align: center;
     font-size: 1.2rem;
+<<<<<<< HEAD
+    padding-bottom: 1rem;
+=======
 
 }
 
 .competition .storyName.award{
   color: #4966a6;
+>>>>>>> 28282f409c6fade486125121f46fdb5fdf0e19f7
 }
 
 .competition img.coverImage {
     max-width: 100%;
     display: block;
     margin: 0 auto;
+<<<<<<< HEAD
+    float: center;
+=======
+>>>>>>> 28282f409c6fade486125121f46fdb5fdf0e19f7
 }
 
 .competition div.storyDetails {
     max-width:100%;
     text-align: left;
+<<<<<<< HEAD
+    float: left;
+    display: block;
+}
+=======
     display: block;
 }
 
@@ -173,3 +199,4 @@
     padding-top: 5%;
   }
 }
+>>>>>>> 28282f409c6fade486125121f46fdb5fdf0e19f7

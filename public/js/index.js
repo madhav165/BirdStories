@@ -115,13 +115,17 @@
 	
 	var _launch2 = _interopRequireDefault(_launch);
 	
-	var _competition = __webpack_require__(/*! ./competition */ 531);
+	var _competition = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./competition\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	var _competition2 = _interopRequireDefault(_competition);
 	
-	var _tooManyReqs = __webpack_require__(/*! ./tooManyReqs */ 534);
+	var _tooManyReqs = __webpack_require__(/*! ./tooManyReqs */ 532);
 	
 	var _tooManyReqs2 = _interopRequireDefault(_tooManyReqs);
+	
+	var _policy = __webpack_require__(/*! ./policy */ 533);
+	
+	var _policy2 = _interopRequireDefault(_policy);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -156,6 +160,7 @@
 	    _react2.default.createElement(_reactRouter.Route, { path: 'writersInfo', component: _writersInfo2.default, requireAuth: true }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'competition', component: _competition2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'tooManyReqs', component: _tooManyReqs2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'policy', component: _policy2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: '*', component: _stories2.default })
 	  )
 	), document.getElementById('root'));
@@ -30001,6 +30006,12 @@
 	              { to: '/about' },
 	              ' ',
 	              window.getString("aboutUs")
+	            ),
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/policy' },
+	              ' ',
+	              window.getString("policy")
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -30484,7 +30495,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".App {\n  text-align: center;\n  margin: 0 auto;\n  padding: 0 auto;\n  max-width: 80rem;\n}\n\n/*@media screen and (min-width:1024px) {\n  .App{max-width:1024px;}\n}*/\n\n.App-logo{\n  font-size: 2.3rem;\n  color: #fff;\n  padding: 0.57em;\n  display: inline-block;\n  padding-left: 0;\n  padding-right: 0;\n}\n\n.App-logo span{\n    color: #d12767;\n}\n\n.App-header {\n  background: none repeat scroll 0 0 #162b4d;\n  position: relative;\n  width: 100%;\n  font-weight: 100;\n  letter-spacing: -1px;\n}\n\n.App-header ul{\n  float: right;\n  padding: 0;\n}\n\n.App-header li {\n    float: left;\n    list-style: none outside none;\n    cursor: pointer;\n    padding: 0;\n}\n\n.App-header li a{\n  font-size: 1.1rem;\n  padding: 1.9rem 1.2rem;\n  color: #fff;\n  letter-spacing: 0px;\n  display: inline-flex;\n  vertical-align: middle;\n}\n\n.App-header .menuIcon li a:hover{\n    background: none;\n  }\n\n.App-header .menu li a:hover{\n    background: none repeat scroll 0 0 #283D5F;\n  }\n.App-header .menu li .active{\n  background: none repeat scroll 0 0 #0b192f !important;\n}\n\n.App-header .menu{\n  max-height: 0;\n  opacity: 0;\n  width:0;\n  visibility: hidden;\n}\n\n.App-header .menu.show{\n  max-height: 10rem;\n  opacity: 1;\n  width: 100%;\n  background: #0b192f;\n  visibility:initial;\n}\n\n.App-header li.menu.show {\n    float: right;\n    width: auto;\n}\n\n.App-header .menuIcon{\n  float: left;\n  padding: 0;\n}\n\n\n.App-header .social{\n  padding:1rem;\n}\n\n.App-header .social li{\n   padding-top: 0.3rem;\n   padding-left: 0.3rem;\n}\n\n.App-header .social li a{\n  padding: 0.5rem;\n  border-radius: 50%;\n  background-color: #283d5f;\n  border: 1px solid white;\n}\n\n.App-header .social li a i{\n  font-size: 30px !important;\n}\n\n.App-header .social li a div{\n  width: 40px !important;\n  height:40px !important;\n}\n\n.App-header .social li a:hover{\n    border: 2px solid #B71757;\n  }\n.App-header .social li .active{\n    border: 2px solid #B71757 !important;\n}\n\n.App-header .logout{\n    padding: 0.5rem;\n    border-radius: 50%;\n    background-color: #283d5f;\n    border: 1px solid white;\n}\n\n.App-footer{\n  background: none repeat scroll 0 0 #162b4d;\n  display: inline-block;\n  margin-bottom: 0;\n  margin-top: 0;\n  padding: 1.7rem;\n  position: relative;\n  width: 100%;\n  color: #637693;\n  font-size: 0.9rem;\n}\n\n.App-footer .rights{\n    float:left;\n    text-align: center;\n    width: 100%;\n\n}\n\n.App-footer .about{\n    float:right;\n    text-align: center;\n    padding: 0.5rem;\n    width: 100%;\n    padding-bottom: 1rem;\n}\n\n.App-footer .about a{\n  color: #637693;\n  font-size: 0.9rem;\n}\n\n.App-body{\n  min-height: 32em;\n}\n\n\n/*@media only screen and (max-width: 350px) {\n  .App-logo{\n     float: left;\n     padding-left: 0;\n     padding-right: 0;\n  }\n}*/\n\n@media only screen and (min-width: 480px) {\n\n  .App-header {\n    margin-bottom: 1rem;\n  }\n\n  .App-footer{\n    margin-top: 1.25rem;\n  }\n}\n\n@media only screen and (min-width: 769px) {\n\n  .App {\n    text-align: left;\n    padding: 0 0.625rem;\n  }\n\n  .App-logo{\n    padding-left: 1rem;\n    padding-right: 1rem;\n  }\n\n  .App-header .menu{\n    max-height: 10rem;\n    opacity: 1;\n    width: auto;\n    visibility:initial;\n  }\n\n  .App-header .menuIcon{\n    height: 0;\n    opacity: 0;\n    width: 0;\n    visibility: hidden;\n  }\n\n  .App-footer .rights{\n      width:66.6%;\n      text-align:left;\n  }\n\n  .App-footer .about{\n      width:33.3%;\n      text-align:right;\n      padding-bottom: 0;\n  }\n\n  #header{\n    background: none repeat scroll 0 0 #162b4d;\n    position: absolute;\n    width: 100%;\n    height: 5.3em;\n  }\n\n}\n", ""]);
+	exports.push([module.id, ".App {\n  text-align: center;\n  margin: 0 auto;\n  padding: 0 auto;\n  max-width: 80rem;\n}\n\n/*@media screen and (min-width:1024px) {\n  .App{max-width:1024px;}\n}*/\n\n.App-logo{\n  font-size: 2.3rem;\n  color: #fff;\n  padding: 0.57em;\n  display: inline-block;\n  padding-left: 0;\n  padding-right: 0;\n}\n\n.App-logo span{\n    color: #d12767;\n}\n\n.App-header {\n  background: none repeat scroll 0 0 #162b4d;\n  position: relative;\n  width: 100%;\n  font-weight: 100;\n  letter-spacing: -1px;\n}\n\n.App-header ul{\n  float: right;\n  padding: 0;\n}\n\n.App-header li {\n    float: left;\n    list-style: none outside none;\n    cursor: pointer;\n    padding: 0;\n}\n\n.App-header li a{\n  font-size: 1.1rem;\n  padding: 1.9rem 1.2rem;\n  color: #fff;\n  letter-spacing: 0px;\n  display: inline-flex;\n  vertical-align: middle;\n}\n\n.App-header .menuIcon li a:hover{\n    background: none;\n  }\n\n.App-header .menu li a:hover{\n    background: none repeat scroll 0 0 #283D5F;\n  }\n.App-header .menu li .active{\n  background: none repeat scroll 0 0 #0b192f !important;\n}\n\n.App-header .menu{\n  max-height: 0;\n  opacity: 0;\n  width:0;\n  visibility: hidden;\n}\n\n.App-header .menu.show{\n  max-height: 10rem;\n  opacity: 1;\n  width: 100%;\n  background: #0b192f;\n  visibility:initial;\n}\n\n.App-header li.menu.show {\n    float: right;\n    width: auto;\n}\n\n.App-header .menuIcon{\n  float: left;\n  padding: 0;\n}\n\n\n.App-header .social{\n  padding:1rem;\n}\n\n.App-header .social li{\n   padding-top: 0.3rem;\n   padding-left: 0.3rem;\n}\n\n.App-header .social li a{\n  padding: 0.5rem;\n  border-radius: 50%;\n  background-color: #283d5f;\n  border: 1px solid white;\n}\n\n.App-header .social li a i{\n  font-size: 30px !important;\n}\n\n.App-header .social li a div{\n  width: 40px !important;\n  height:40px !important;\n}\n\n.App-header .social li a:hover{\n    border: 2px solid #B71757;\n  }\n.App-header .social li .active{\n    border: 2px solid #B71757 !important;\n}\n\n.App-header .logout{\n    padding: 0.5rem;\n    border-radius: 50%;\n    background-color: #283d5f;\n    border: 1px solid white;\n}\n\n.App-footer{\n  background: none repeat scroll 0 0 #162b4d;\n  display: inline-block;\n  margin-bottom: 0;\n  margin-top: 0;\n  padding: 1.7rem;\n  position: relative;\n  width: 100%;\n  color: #637693;\n  font-size: 0.9rem;\n}\n\n.App-footer .rights{\n    float:left;\n    text-align: center;\n    width: 100%;\n\n}\n\n.App-footer .about{\n    float:right;\n    text-align: center;\n    width: 100%;\n    padding-bottom: 1rem;\n}\n\n.App-footer .about a{\n  color: #637693;\n  font-size: 0.9rem;\n  padding: 0.2rem;\n}\n\n.App-body{\n  min-height: 32em;\n}\n\n\n/*@media only screen and (max-width: 350px) {\n  .App-logo{\n     float: left;\n     padding-left: 0;\n     padding-right: 0;\n  }\n}*/\n\n@media only screen and (min-width: 480px) {\n\n  .App-header {\n    margin-bottom: 1rem;\n  }\n\n  .App-footer{\n    margin-top: 1.25rem;\n  }\n}\n\n@media only screen and (min-width: 769px) {\n\n  .App {\n    text-align: left;\n    padding: 0 0.625rem;\n  }\n\n  .App-logo{\n    padding-left: 1rem;\n    padding-right: 1rem;\n  }\n\n  .App-header .menu{\n    max-height: 10rem;\n    opacity: 1;\n    width: auto;\n    visibility:initial;\n  }\n\n  .App-header .menuIcon{\n    height: 0;\n    opacity: 0;\n    width: 0;\n    visibility: hidden;\n  }\n\n  .App-footer .rights{\n      width:66.6%;\n      text-align:left;\n  }\n\n  .App-footer .about{\n      width:33.3%;\n      text-align:right;\n      padding-bottom: 0;\n  }\n\n  #header{\n    background: none repeat scroll 0 0 #162b4d;\n    position: absolute;\n    width: 100%;\n    height: 5.3em;\n  }\n\n}\n", ""]);
 	
 	// exports
 
@@ -36931,7 +36942,10 @@
 	      //can't load controller without these values
 	      if (authorId && id && name) {
 	
-	        var obj = _storiesActions2.default.getStoryContent(authorId, name);
+	        var obj = _storiesActions2.default.clearSelectedState();
+	        _storiesStore2.default.dispatch(obj);
+	
+	        obj = _storiesActions2.default.getStoryContent(authorId, name);
 	        _storiesStore2.default.dispatch(obj);
 	
 	        if (story) {
@@ -37314,7 +37328,7 @@
 	
 	
 	// module
-	exports.push([module.id, "\n.loading {\n  text-align: center;\n  width: 100%;\n  float: left;\n}\n\n.loading > div {\n  width: 1em;\n  height: 1em;\n  background-color: #f8f8f8;\n  border-radius: 100%;\n  display: inline-block;\n  -webkit-animation: loadingdelay 1.5s infinite ease-in-out both;\n  animation: loadingdelay 1.5s infinite ease-in-out both;\n}\n\n.loading .circle1 {\n  -webkit-animation-delay: -0.48s;\n  animation-delay: -0.48s;\n}\n\n.loading .circle2 {\n  -webkit-animation-delay: -0.32s;\n  animation-delay: -0.32s;\n}\n\n.loading .circle3 {\n  -webkit-animation-delay: -0.16s;\n  animation-delay: -0.16s;\n}\n\n@-webkit-keyframes loadingdelay {\n  0%, 80%, 100% { -webkit-transform: scale(0) }\n  40% { -webkit-transform: scale(1.0) }\n}\n\n@keyframes loadingdelay {\n  0%, 80%, 100% {\n    -webkit-transform: scale(0);\n    transform: scale(0);\n  } 40% {\n    -webkit-transform: scale(1.0);\n    transform: scale(1.0);\n  }\n}\n", ""]);
+	exports.push([module.id, "\n.loading {\n  text-align: center;\n  width: 100%;\n  padding-top: 2rem;\n  float: left;\n}\n\n.loading > div {\n  width: 1em;\n  height: 1em;\n  background-color: #f8f8f8;\n  border-radius: 100%;\n  display: inline-block;\n  -webkit-animation: loadingdelay 1.5s infinite ease-in-out both;\n  animation: loadingdelay 1.5s infinite ease-in-out both;\n}\n\n.loading .circle1 {\n  -webkit-animation-delay: -0.48s;\n  animation-delay: -0.48s;\n}\n\n.loading .circle2 {\n  -webkit-animation-delay: -0.32s;\n  animation-delay: -0.32s;\n}\n\n.loading .circle3 {\n  -webkit-animation-delay: -0.16s;\n  animation-delay: -0.16s;\n}\n\n@-webkit-keyframes loadingdelay {\n  0%, 80%, 100% { -webkit-transform: scale(0) }\n  40% { -webkit-transform: scale(1.0) }\n}\n\n@keyframes loadingdelay {\n  0%, 80%, 100% {\n    -webkit-transform: scale(0);\n    transform: scale(0);\n  } 40% {\n    -webkit-transform: scale(1.0);\n    transform: scale(1.0);\n  }\n}\n", ""]);
 	
 	// exports
 
@@ -37558,6 +37572,13 @@
 	  };
 	}
 	
+	function clearSelectedState(story) {
+	  return {
+	    type: _storiesConstants2.default.StoryClearSelectedState,
+	    story: story
+	  };
+	}
+	
 	var Actions = {
 	  fetchStories: fetchStories,
 	  fetchStoriesIfNeeded: fetchStoriesIfNeeded,
@@ -37570,7 +37591,8 @@
 	  publishComment: publishComment,
 	  getComments: fetchComments,
 	  getMoreComments: getMoreComments,
-	  getMoreStories: getMoreStories
+	  getMoreStories: getMoreStories,
+	  clearSelectedState: clearSelectedState
 	};
 	
 	exports.default = Actions;
@@ -37596,7 +37618,8 @@
 	            StoryAuthorDetailsSuccess: 'story_author_details_success',
 	            StoryCommentsSuccess: 'story_comments_success',
 	            StoryCommentPostSuccess: 'story_comment_post_success',
-	            StoryMoreCommentsSuccess: 'story_more_comments_success'
+	            StoryMoreCommentsSuccess: 'story_more_comments_success',
+	            StoryClearSelectedState: 'story_clear_selected_state'
 	};
 	exports.default = Constants;
 
@@ -37703,6 +37726,10 @@
 	var _analytics = __webpack_require__(/*! ../util/analytics */ 261);
 	
 	var _analytics2 = _interopRequireDefault(_analytics);
+	
+	var _loading = __webpack_require__(/*! ../util/loading */ 369);
+	
+	var _loading2 = _interopRequireDefault(_loading);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -37937,6 +37964,8 @@
 	        }
 	
 	        if (!markedAsView) this.storyLoaded();
+	      } else {
+	        tag.push(_react2.default.createElement(_loading2.default, { key: 0 }));
 	      }
 	
 	      return _react2.default.createElement(
@@ -45110,6 +45139,22 @@
 	        newState.selectedStoryComments = comments.concat(action.comments);
 	      }
 	      return newState;
+	
+	    case _storiesConstants2.default.StoryClearSelectedState:
+	
+	      if (!state.selectedStory) {
+	        return state;
+	      }
+	
+	      var newState = _extends({}, state);
+	      newState.selectedStoryComments = undefined;
+	      newState.selectedStory = undefined;
+	      newState.selectedAuthor = undefined;
+	      newState.selectedContent = undefined;
+	      return newState;
+	
+	      return state;
+	
 	    default:
 	      return state;
 	  }
@@ -45197,7 +45242,10 @@
 	      //can't load controller without these values
 	      if (authorId && id && name) {
 	
-	        var obj = _seriesActions2.default.getSeriesContent(authorId, name, episode);
+	        var obj = _seriesActions2.default.clearSelectedState();
+	        _seriesStore2.default.dispatch(obj);
+	
+	        obj = _seriesActions2.default.getSeriesContent(authorId, name, episode);
 	        _seriesStore2.default.dispatch(obj);
 	
 	        if (series) {
@@ -45731,6 +45779,13 @@
 	  };
 	}
 	
+	function clearSelectedState(series) {
+	  return {
+	    type: _seriesConstants2.default.SeriesClearSelectedState,
+	    series: series
+	  };
+	}
+	
 	var Actions = {
 	  fetchSeriesList: fetchSeriesList,
 	  fetchSeriesListIfNeeded: fetchSeriesListIfNeeded,
@@ -45743,7 +45798,8 @@
 	  publishComment: publishComment,
 	  getComments: fetchComments,
 	  getMoreComments: getMoreComments,
-	  getMoreSeries: getMoreSeries
+	  getMoreSeries: getMoreSeries,
+	  clearSelectedState: clearSelectedState
 	};
 	
 	exports.default = Actions;
@@ -45769,7 +45825,8 @@
 	            SeriesAuthorDetailsSuccess: 'series_author_details_success',
 	            SeriesCommentsSuccess: 'series_comments_success',
 	            SeriesCommentPostSuccess: 'series_comment_post_success',
-	            SeriesMoreCommentsSuccess: 'series_more_comments_success'
+	            SeriesMoreCommentsSuccess: 'series_more_comments_success',
+	            SeriesClearSelectedState: 'series_clear_selected_state'
 	};
 	exports.default = Constants;
 
@@ -45957,6 +46014,21 @@
 	        newState.selectedSeriesComments = comments.concat(action.comments);
 	      }
 	      return newState;
+	
+	    case _seriesConstants2.default.SeriesClearSelectedState:
+	
+	      if (!state.selectedSeries) {
+	        return state;
+	      }
+	
+	      var newState = _extends({}, state);
+	      newState.selectedSeriesComments = undefined;
+	      newState.selectedSeries = undefined;
+	      newState.selectedAuthor = undefined;
+	      newState.selectedContent = undefined;
+	      newState.selectedEpisode = undefined;
+	      return newState;
+	
 	    default:
 	      return state;
 	  }
@@ -46071,14 +46143,15 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'adImage' },
-	          '\u0C38\u0C41\u2019\u0C15\u0C25\u2019 \u0C28\u0C3F\u0C30\u0C4D\u0C35\u0C39\u0C3F\u0C02\u0C1A\u0C3F\u0C28 \u2018\u0C2A\u0C3E\u0C24\u0C4D\u0C30\u0C15\u0C3F \u0C1C\u0C40\u0C35\u0C02 \u0C2A\u0C4B\u0C2F\u0C02\u0C21\u0C3F\u2019 \u0C15\u0C25\u0C32 \u0C2A\u0C4B\u0C1F\u0C3F \u0C35\u0C3F\u0C1C\u0C47\u0C24\u0C32 \u0C35\u0C3F\u0C35\u0C30\u0C3E\u0C32\u0C15\u0C48 \u0C07\u0C15\u0C4D\u0C15\u0C21 \u0C15\u0C4D\u0C32\u0C3F\u0C15\u0C4D \u0C1A\u0C47\u0C2F\u0C02\u0C21\u0C3F. ',
+	          '\u2018\u0C2A\u0C3E\u0C24\u0C4D\u0C30\u0C15\u0C3F \u0C1C\u0C40\u0C35\u0C02 \u0C2A\u0C4B\u0C2F\u0C02\u0C21\u0C3F\u2019 \u0C15\u0C25\u0C32 \u0C2A\u0C4B\u0C1F\u0C3F\u0C32\u0C4B \u0C2C\u0C39\u0C41\u0C2E\u0C24\u0C3F \u0C17\u0C46\u0C32\u0C41\u0C1A\u0C41\u0C15\u0C41\u0C28\u0C4D\u0C28 \u0C15\u0C25\u0C32 \u0C15\u0C4B\u0C38\u0C02 \u0C07\u0C15\u0C4D\u0C15\u0C21 \u0C15\u0C4D\u0C32\u0C3F\u0C15\u0C4D \u0C1A\u0C47\u0C2F\u0C02\u0C21\u0C3F.',
 	          _react2.default.createElement('img', { src: 'touch.png', className: 'adIcon' })
 	        )
 	      );
 	
-	      if (!this.state.imageStatus) {
-	        img = "";
-	      }
+	      // if(!this.state.imageStatus){
+	      //   img = ""
+	      // }
+	
 	
 	      var storiesDivison = _react2.default.createElement(
 	        'div',
@@ -46959,303 +47032,8 @@
 
 
 /***/ }),
-/* 531 */
-/*!************************!*\
-  !*** ./competition.js ***!
-  \************************/
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _analytics = __webpack_require__(/*! ./util/analytics */ 261);
-	
-	var _analytics2 = _interopRequireDefault(_analytics);
-	
-	var _competition = __webpack_require__(/*! ./css/competition.css */ 532);
-	
-	var _competition2 = _interopRequireDefault(_competition);
-	
-	var _reactRouter = __webpack_require__(/*! react-router */ 178);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Competition = function (_Component) {
-	  _inherits(Competition, _Component);
-	
-	  function Competition() {
-	    _classCallCheck(this, Competition);
-	
-	    return _possibleConstructorReturn(this, (Competition.__proto__ || Object.getPrototypeOf(Competition)).apply(this, arguments));
-	  }
-	
-	  _createClass(Competition, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      window.scrollTo(0, 0);
-	      document.title = window.getString("Competition") + " - " + window.getString("companyPromo");
-	      _analytics2.default.sendPageView('competition');
-	
-	      window.onbeforeunload = function () {
-	        _analytics2.default.sendEvent('Competition', 'close', 'competition');
-	      };
-	    }
-	  }, {
-	    key: 'componentWillUnmount',
-	    value: function componentWillUnmount() {
-	      _analytics2.default.sendEvent('Competition', 'close', 'competition');
-	      window.onbeforeunload = undefined;
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'competition' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'pageHeader' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'topLeftTitle' },
-	            '\u0C38\u0C41\u2019\u0C15\u0C25\u2019 \u0C28\u0C3F\u0C30\u0C4D\u0C35\u0C39\u0C23\u0C32\u0C4B..'
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'topRightTitle' },
-	            '\u0C15\u0C25\u0C32 \u0C2A\u0C4B\u0C1F\u0C40..'
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'mainTitle' },
-	            '\u0C2A\u0C3E\u0C24\u0C4D\u0C30\u0C15\u0C3F \u0C1C\u0C40\u0C35\u0C02 \u0C2A\u0C4B\u0C2F\u0C02\u0C21\u0C3F '
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'addressInfo' },
-	          '\u0C2E\u0C3E \u0C08 \u0C28\u0C42\u0C24\u0C28 \u0C2A\u0C4D\u0C30\u0C2F\u0C4B\u0C17\u0C3E\u0C28\u0C4D\u0C28\u0C3F \u0C35\u0C3F\u0C1C\u0C2F\u0C35\u0C02\u0C24\u0C02 \u0C1A\u0C47\u0C38\u0C3F\u0C28 \u0C30\u0C1A\u0C2F\u0C3F\u0C24\u0C32\u0C15\u0C3F \u0C2E\u0C28\u0C03\u0C2A\u0C42\u0C30\u0C4D\u0C35\u0C15 \u0C27\u0C28\u0C4D\u0C2F\u0C35\u0C3E\u0C26\u0C3E\u0C32\u0C41 \u0C2E\u0C30\u0C3F\u0C2F\u0C41 \u0C35\u0C3F\u0C1C\u0C47\u0C24\u0C32\u0C15\u0C41 \u0C2E\u0C3E \u0C05\u0C2D\u0C3F\u0C28\u0C02\u0C26\u0C28\u0C32\u0C41.'
-	        ),
-	        _react2.default.createElement(
-	          'ul',
-	          { className: 'characters' },
-	          _react2.default.createElement(
-	            'li',
-	            { className: 'character' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'storyName' },
-	              '\u0C2E\u0C4A\u0C26\u0C1F\u0C3F \u0C2C\u0C39\u0C41\u0C2E\u0C24\u0C3F'
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'storyName' },
-	              '\u0C26\u0C4A\u0C02\u0C17 \u0C26\u0C46\u0C2C\u0C4D\u0C2C'
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'storyDetails' },
-	              _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement('img', { className: 'coverImage', src: 'https://s3.ap-south-1.amazonaws.com/bsstory/rammohan/dongadebba/cover.jpg' })
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'authorInfo' },
-	                _react2.default.createElement('img', { src: 'https://s3.ap-south-1.amazonaws.com/bsstory/rammohan/profile.jpg', className: 'winnerPhoto' }),
-	                _react2.default.createElement(
-	                  'div',
-	                  null,
-	                  'Author: Koilada Rammohan Rao'
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  null,
-	                  'Prize money: \u20B915,000'
-	                ),
-	                _react2.default.createElement(
-	                  'a',
-	                  { href: 'https://www.sukatha.com/author/rammohan' },
-	                  'Details about Koilada Rammohan Rao'
-	                )
-	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'li',
-	            { className: 'character' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'storyName' },
-	              '\u0C30\u0C46\u0C02\u0C21\u0C35 \u0C2C\u0C39\u0C41\u0C2E\u0C24\u0C3F'
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'storyName' },
-	              '\u0C2E\u0C41\u0C24\u0C4D\u0C2F\u0C3E\u0C32 \u0C30\u0C3E\u0C1C\u0C41  - \u0C2E\u0C3E\u0C2F\u0C3E \u0C09\u0C02\u0C17\u0C30\u0C02'
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'storyDetails' },
-	              _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement('img', { className: 'coverImage', src: 'https://s3.ap-south-1.amazonaws.com/bsstory/satyavathi/mayaungaram/cover.jpg' })
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'authorInfo' },
-	                _react2.default.createElement('img', { src: 'https://s3.ap-south-1.amazonaws.com/bsstory/satyavathi/profile.jpg', className: 'winnerPhoto' }),
-	                _react2.default.createElement(
-	                  'div',
-	                  null,
-	                  'Author: Satyavathi Dinavahi'
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  null,
-	                  'Prize money: \u20B97,000'
-	                ),
-	                _react2.default.createElement(
-	                  'a',
-	                  { href: 'https://www.sukatha.com/author/satyavathi' },
-	                  'Details about Satyavathi Dinavahi'
-	                )
-	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'li',
-	            { className: 'character' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'storyName' },
-	              '\u0C2E\u0C42\u0C21\u0C35 \u0C2C\u0C39\u0C41\u0C2E\u0C24\u0C3F'
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'storyName' },
-	              '\u0C38\u0C2E\u0C3F\u0C27'
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'storyDetails' },
-	              _react2.default.createElement(
-	                'div',
-	                null,
-	                _react2.default.createElement('img', { className: 'coverImage', src: 'https://s3.ap-south-1.amazonaws.com/bsstory/luckysri/samidha/cover.jpg' })
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'authorInfo' },
-	                _react2.default.createElement(
-	                  'div',
-	                  null,
-	                  _react2.default.createElement('img', { src: 'https://s3.ap-south-1.amazonaws.com/bsstory/luckysri/profile.jpg', className: 'winnerPhoto' })
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  null,
-	                  'Author: Srinivasa Raju Uppalapati'
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  null,
-	                  'Prize money: \u20B93,000'
-	                ),
-	                _react2.default.createElement(
-	                  'a',
-	                  { href: 'https://www.sukatha.com/author/luckysri' },
-	                  'Details about Srinivasa Raju Uppalapati'
-	                )
-	              )
-	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'home' },
-	          ' ',
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/' },
-	            '\u2190 Home'
-	          ),
-	          ' '
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return Competition;
-	}(_react.Component);
-	
-	exports.default = Competition;
-
-/***/ }),
+/* 531 */,
 /* 532 */
-/*!*****************************!*\
-  !*** ./css/competition.css ***!
-  \*****************************/
-/***/ (function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(/*! !../../~/css-loader!./competition.css */ 533);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(/*! ../../~/style-loader/addStyles.js */ 250)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!./competition.css", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!./competition.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ }),
-/* 533 */
-/*!*********************************************!*\
-  !*** ../~/css-loader!./css/competition.css ***!
-  \*********************************************/
-/***/ (function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-base.js */ 249)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".competition{\n  text-align: center;\n  display: inline-block;\n  width: 100%;\n  background: none repeat scroll 0 0 #fff;\n  color: #162b4d;\n  font-family: notosans;\n  float: left;\n}\n\n.competition .pageHeader {\n  text-align: center;\n  display: inline-block;\n  float: left;\n  width: 100%;\n  padding: 3vw;\n  background-image: url(" + __webpack_require__(/*! ../img/bg.png */ 382) + ");\n  color: rgba(255, 255, 255, 0.8);\n}\n\n.competition .pageHeader .topLeftTitle {\n    float: left;\n    font-size: 1rem;\n}\n\n.competition .pageHeader .topRightTitle {\n    float: right;\n    font-size: 1rem;\n}\n.competition .pageHeader .mainTitle {\n  width: 100%;\n  padding: 1.4rem 0;\n  display: inline-block;\n}\n\n.competition .pageHeader ul.prizes {\n    padding: 0;\n    font-size: 1rem;\n    /* padding-bottom: 0.1rem; */\n    display: inline-block;\n    width: 100%;\n}\n\n.competition .pageHeader li.prize {\n    float: left;\n    display: inline-block;\n    width: 33%;\n}\n\n.competition .addressInfo {\n    display: inline-block;\n    padding: 3vw;\n    word-spacing: 0.2rem;\n    line-height: 1.6;\n    font-size: 1.2rem;\n}\n\n.competition .highlight{\n  color: #d12767;\n}\n\n.competition ul.characters {\n    display: inline-block;\n    padding: 0 5vw;\n    word-spacing: 0.2rem;\n    line-height: 1.6;\n    text-align: left;\n}\n\n.competition li.character {\n    float: left;\n    width: 100%;\n    padding: 1rem 0;\n\n}\n\n.competition ul.finalWords {\n    padding: 1rem 0;\n    font-size: 1.2rem;\n    width: 100%;\n    float: left;\n    display: inline-block;\n}\n\n.competition .ps{\n    display: inline-block;\n    padding: 2vw 3vw;\n    word-spacing: 0.2rem;\n    line-height: 1.6;\n    font-size: 1.2rem;\n    float: left;\n    width: 100%;\n    text-align: left;\n}\n\n.competition .home{\n    padding: 1.5rem 0 0.5rem 0;\n    color: #d12767;\n    width: 100%;\n    float: left;\n    display: inline-block;\n}\n\n.competition img.winnerPhoto {\n    width: 10rem;\n    height: 10rem;\n}\n\n.competition div.authorInfo {\n    float: left;\n    margin-top: 1rem;\n    display: block;\n}\n\n.competition div.storyName {\n    color: #d12767;\n    text-align: center;\n    font-size: 1.2rem;\n    padding-bottom: 1rem;\n}\n\n.competition img.coverImage {\n    max-width: 100%;\n    display: block;\n    margin: 0 auto;\n    float: center;\n}\n\n.competition div.storyDetails {\n    max-width:100%;\n    text-align: left;\n    float: left;\n    display: block;\n}\n", ""]);
-	
-	// exports
-
-
-/***/ }),
-/* 534 */
 /*!************************!*\
   !*** ./tooManyReqs.js ***!
   \************************/
@@ -47319,6 +47097,125 @@
 	}(_react.Component);
 	
 	exports.default = TooManyReqs;
+
+/***/ }),
+/* 533 */
+/*!*******************!*\
+  !*** ./policy.js ***!
+  \*******************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 178);
+	
+	var _analytics = __webpack_require__(/*! ./util/analytics */ 261);
+	
+	var _analytics2 = _interopRequireDefault(_analytics);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var policyStyle = {
+	  padding: "0.25em",
+	  letterSpacing: "0.02em",
+	  textIndent: "10%",
+	  lineHeight: " 1.25rem",
+	  textAlign: "left",
+	  color: "#dcdcdc"
+	};
+	
+	var para = {
+	  padding: "1em"
+	};
+	
+	var Policy = function (_Component) {
+	  _inherits(Policy, _Component);
+	
+	  function Policy() {
+	    _classCallCheck(this, Policy);
+	
+	    return _possibleConstructorReturn(this, (Policy.__proto__ || Object.getPrototypeOf(Policy)).apply(this, arguments));
+	  }
+	
+	  _createClass(Policy, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      window.scrollTo(0, 0);
+	      document.title = window.getString("policy") + " -" + window.getString("companyPromo");
+	      _analytics2.default.sendPageView('policy');
+	      window.onbeforeunload = function () {
+	        _analytics2.default.sendEvent('Policy', 'close', 'policy');
+	      };
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { style: policyStyle },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'pageHeader' },
+	          window.getString("policy")
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          { style: para },
+	          'We collect only the following information about you from your social profile.'
+	        ),
+	        _react2.default.createElement(
+	          'ul',
+	          null,
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Name'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Email id'
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            'Profile picture '
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          { style: para },
+	          'We may keep this information indefinitely. You can access this information (mentionedabove) by signing into your account. We do not share this personally identifiable information with any third party companies or advertising agencies/networks. We do not use cookies or unique device identifiers to get any identifiable or anonymous information about your activity, location or device. We take reasonable steps to secure your personally identifiable information against unauthorized access or disclosure.'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          { style: para },
+	          'This privacy policy was last updated on 8-Jul- 2017. Our privacy policy may change from time to time. If we make any material changes to our policies, we will place a prominent notice on our website or application. If the change materially affects registered users, we will send a notice to you by email, push notification or text. If you have any questions or concerns about our policy, please contact us at storyboard@sukatha.com. '
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Policy;
+	}(_react.Component);
+	
+	exports.default = Policy;
 
 /***/ })
 /******/ ]);
