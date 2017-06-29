@@ -20,7 +20,7 @@ class Policy extends Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
-    document.title = window.getString("policy") + " -"+window.getString("companyPromo");
+    document.title = window.getString("policy") + " - "+window.getString("companyPromo");
     SA.sendPageView('policy');
     window.onbeforeunload = () => {
         SA.sendEvent('Policy','close','policy');

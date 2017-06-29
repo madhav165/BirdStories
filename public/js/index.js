@@ -115,15 +115,15 @@
 	
 	var _launch2 = _interopRequireDefault(_launch);
 	
-	var _competition = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./competition\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _competition = __webpack_require__(/*! ./competition */ 531);
 	
 	var _competition2 = _interopRequireDefault(_competition);
 	
-	var _tooManyReqs = __webpack_require__(/*! ./tooManyReqs */ 532);
+	var _tooManyReqs = __webpack_require__(/*! ./tooManyReqs */ 534);
 	
 	var _tooManyReqs2 = _interopRequireDefault(_tooManyReqs);
 	
-	var _policy = __webpack_require__(/*! ./policy */ 533);
+	var _policy = __webpack_require__(/*! ./policy */ 535);
 	
 	var _policy2 = _interopRequireDefault(_policy);
 	
@@ -47032,8 +47032,343 @@
 
 
 /***/ }),
-/* 531 */,
+/* 531 */
+/*!************************!*\
+  !*** ./competition.js ***!
+  \************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _analytics = __webpack_require__(/*! ./util/analytics */ 261);
+	
+	var _analytics2 = _interopRequireDefault(_analytics);
+	
+	var _competition = __webpack_require__(/*! ./css/competition.css */ 532);
+	
+	var _competition2 = _interopRequireDefault(_competition);
+	
+	var _reactRouter = __webpack_require__(/*! react-router */ 178);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Competition = function (_Component) {
+	  _inherits(Competition, _Component);
+	
+	  function Competition() {
+	    _classCallCheck(this, Competition);
+	
+	    return _possibleConstructorReturn(this, (Competition.__proto__ || Object.getPrototypeOf(Competition)).apply(this, arguments));
+	  }
+	
+	  _createClass(Competition, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      window.scrollTo(0, 0);
+	      document.title = window.getString("Competition") + " - " + window.getString("companyPromo");
+	      _analytics2.default.sendPageView('competition');
+	
+	      window.onbeforeunload = function () {
+	        _analytics2.default.sendEvent('Competition', 'close', 'competition');
+	      };
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      _analytics2.default.sendEvent('Competition', 'close', 'competition');
+	      window.onbeforeunload = undefined;
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	
+	      var link = "/stories/story";
+	      var query1 = { t: '1498649778000', a: 'rammohan', n: 'dongadebba' };
+	      var linkObj1 = {
+	        pathname: link,
+	        query: query1
+	      };
+	
+	      var query2 = { t: '1498649418000', a: 'satyavathi', n: 'mayaungaram' };
+	      var linkObj2 = {
+	        pathname: link,
+	        query: query2
+	      };
+	
+	      var query3 = { t: '1498649066000', a: 'luckysri', n: 'samidha' };
+	      var linkObj3 = {
+	        pathname: link,
+	        query: query3
+	      };
+	
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'competition' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'pageHeader' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'topLeftTitle' },
+	            '\u0C38\u0C41\u2019\u0C15\u0C25\u2019 \u0C28\u0C3F\u0C30\u0C4D\u0C35\u0C39\u0C23\u0C32\u0C4B..'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'topRightTitle' },
+	            '\u0C15\u0C25\u0C32 \u0C2A\u0C4B\u0C1F\u0C40..'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'mainTitle' },
+	            '\u0C2A\u0C3E\u0C24\u0C4D\u0C30\u0C15\u0C3F \u0C1C\u0C40\u0C35\u0C02 \u0C2A\u0C4B\u0C2F\u0C02\u0C21\u0C3F '
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'addressInfo' },
+	          '\u0C2E\u0C3E \u0C08 \u0C28\u0C42\u0C24\u0C28 \u0C2A\u0C4D\u0C30\u0C2F\u0C4B\u0C17\u0C3E\u0C28\u0C4D\u0C28\u0C3F \u0C35\u0C3F\u0C1C\u0C2F\u0C35\u0C02\u0C24\u0C02 \u0C1A\u0C47\u0C38\u0C3F\u0C28 \u0C30\u0C1A\u0C2F\u0C3F\u0C24\u0C32\u0C15\u0C3F \u0C2E\u0C28\u0C03\u0C2A\u0C42\u0C30\u0C4D\u0C35\u0C15 \u0C27\u0C28\u0C4D\u0C2F\u0C35\u0C3E\u0C26\u0C3E\u0C32\u0C41 \u0C2E\u0C30\u0C3F\u0C2F\u0C41 \u0C35\u0C3F\u0C1C\u0C47\u0C24\u0C32\u0C15\u0C41 \u0C2E\u0C3E \u0C05\u0C2D\u0C3F\u0C28\u0C02\u0C26\u0C28\u0C32\u0C41.'
+	        ),
+	        _react2.default.createElement(
+	          'ul',
+	          { className: 'characters' },
+	          _react2.default.createElement(
+	            'li',
+	            { className: 'character' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'storyName award' },
+	              '\u0C2E\u0C4A\u0C26\u0C1F\u0C3F \u0C2C\u0C39\u0C41\u0C2E\u0C24\u0C3F'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'storyDetails' },
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: linkObj1, className: 'authorClick' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'storyName' },
+	                  '\u0C26\u0C4A\u0C02\u0C17 \u0C26\u0C46\u0C2C\u0C4D\u0C2C'
+	                ),
+	                _react2.default.createElement('img', { className: 'coverImage', src: 'https://s3.ap-south-1.amazonaws.com/bsstory/rammohan/dongadebba/cover.jpg' })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'authorInfo' },
+	                _react2.default.createElement('img', { src: 'https://s3.ap-south-1.amazonaws.com/bsstory/rammohan/profile.jpg', className: 'winnerPhoto' }),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'authorDetails' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    'Koilada Rammohan Rao'
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    'Prize money \u20B915,000'
+	                  ),
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: '/author/rammohan' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'authorClick' },
+	                      'About author'
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            { className: 'character' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'storyName award' },
+	              '\u0C30\u0C46\u0C02\u0C21\u0C35 \u0C2C\u0C39\u0C41\u0C2E\u0C24\u0C3F'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'storyDetails' },
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: linkObj2, className: 'authorClick' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'storyName' },
+	                  '\u0C2E\u0C41\u0C24\u0C4D\u0C2F\u0C3E\u0C32 \u0C30\u0C3E\u0C1C\u0C41  - \u0C2E\u0C3E\u0C2F\u0C3E \u0C09\u0C02\u0C17\u0C30\u0C02'
+	                ),
+	                _react2.default.createElement('img', { className: 'coverImage', src: 'https://s3.ap-south-1.amazonaws.com/bsstory/satyavathi/mayaungaram/cover.jpg' })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'authorInfo' },
+	                _react2.default.createElement('img', { src: 'https://s3.ap-south-1.amazonaws.com/bsstory/satyavathi/profile.jpg', className: 'winnerPhoto' }),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'authorDetails' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    'Satyavathi Dinavahi'
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    'Prize money \u20B97,000'
+	                  ),
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: '/author/satyavathi' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'authorClick' },
+	                      'About author'
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            { className: 'character' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'storyName award' },
+	              '\u0C2E\u0C42\u0C21\u0C35 \u0C2C\u0C39\u0C41\u0C2E\u0C24\u0C3F'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'storyDetails' },
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: linkObj3, className: 'authorClick' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'storyName' },
+	                  '\u0C38\u0C2E\u0C3F\u0C27'
+	                ),
+	                _react2.default.createElement('img', { className: 'coverImage', src: 'https://s3.ap-south-1.amazonaws.com/bsstory/luckysri/samidha/cover.jpg' })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'authorInfo' },
+	                _react2.default.createElement('img', { src: 'https://s3.ap-south-1.amazonaws.com/bsstory/luckysri/profile.jpg', className: 'winnerPhoto' }),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'authorDetails' },
+	                  _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    'Srinivasa Raju Uppalapati'
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    'Prize money \u20B93,000'
+	                  ),
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: '/author/luckysri' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'authorClick' },
+	                      'About author'
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'home' },
+	          ' ',
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/' },
+	            '\u2190 Home'
+	          ),
+	          ' '
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Competition;
+	}(_react.Component);
+	
+	exports.default = Competition;
+
+/***/ }),
 /* 532 */
+/*!*****************************!*\
+  !*** ./css/competition.css ***!
+  \*****************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(/*! !../../~/css-loader!./competition.css */ 533);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(/*! ../../~/style-loader/addStyles.js */ 250)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../node_modules/css-loader/index.js!./competition.css", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!./competition.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ }),
+/* 533 */
+/*!*********************************************!*\
+  !*** ../~/css-loader!./css/competition.css ***!
+  \*********************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-base.js */ 249)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".competition{\n  text-align: center;\n  display: inline-block;\n  width: 100%;\n  background: none repeat scroll 0 0 #fff;\n  color: #162b4d;\n  font-family: notosans;\n  float: left;\n}\n\n.competition .pageHeader {\n  text-align: center;\n  display: inline-block;\n  float: left;\n  width: 100%;\n  padding: 3vw;\n  background-image: url(" + __webpack_require__(/*! ../img/bg.png */ 382) + ");\n  color: rgba(255, 255, 255, 0.8);\n}\n\n.competition .pageHeader .topLeftTitle {\n    float: left;\n    font-size: 1rem;\n}\n\n.competition .pageHeader .topRightTitle {\n    float: right;\n    font-size: 1rem;\n}\n.competition .pageHeader .mainTitle {\n  width: 100%;\n  padding: 1.4rem 0;\n  display: inline-block;\n}\n\n.competition .pageHeader ul.prizes {\n    padding: 0;\n    font-size: 1rem;\n    /* padding-bottom: 0.1rem; */\n    display: inline-block;\n    width: 100%;\n}\n\n.competition .pageHeader li.prize {\n    float: left;\n    display: inline-block;\n    width: 33%;\n}\n\n.competition .addressInfo {\n    display: inline-block;\n    padding: 3vw;\n    word-spacing: 0.2rem;\n    line-height: 1.6;\n    font-size: 1.2rem;\n}\n\n.competition .highlight{\n  color: #d12767;\n}\n\n.competition ul.characters {\n    display: inline-block;\n    padding: 0 5vw;\n    word-spacing: 0.2rem;\n    line-height: 1.6;\n    text-align: left;\n}\n\n.competition li.character {\n    float: left;\n    width: 100%;\n    padding: 2rem 0;\n    border-bottom: 1px solid;\n\n}\n\n.competition ul.finalWords {\n    padding: 1rem 0;\n    font-size: 1.2rem;\n    width: 100%;\n    float: left;\n    display: inline-block;\n}\n\n.competition .ps{\n    display: inline-block;\n    padding: 2vw 3vw;\n    word-spacing: 0.2rem;\n    line-height: 1.6;\n    font-size: 1.2rem;\n    float: left;\n    width: 100%;\n    text-align: left;\n}\n\n.competition .home{\n    padding: 1.5rem 0 0.5rem 0;\n    color: #d12767;\n    width: 100%;\n    float: left;\n    display: inline-block;\n}\n\n.competition img.winnerPhoto {\n    width: 25%;\n    height: 25%;\n    border-radius: 50%;\n    float: left;\n}\n\n.competition div.authorDetails{\n    width: 75%;\n    padding: 5%;\n    padding-top: 2%;\n    float: left;\n}\n\n.competition div.authorInfo {\n    margin-top: 1rem;\n    display: block;\n    width: 100%;\n}\n\n\n\n.competition div.storyName {\n    color: #d12767;\n    text-align: center;\n    font-size: 1.2rem;\n\n}\n\n.competition .storyName.award{\n  color: #4966a6;\n}\n\n.competition img.coverImage {\n    max-width: 100%;\n    display: block;\n    margin: 0 auto;\n}\n\n.competition div.storyDetails {\n    max-width:100%;\n    text-align: left;\n    display: block;\n}\n\n.competition .authorClick{\n  color: #d12767;\n}\n\n@media only screen and (min-width: 760px) {\n  .competition div.authorInfo {\n    margin-left: 15%;\n    width: 70%;\n  }\n\n  .competition div.authorDetails{\n    padding-top: 6%;\n  }\n\n}\n\n@media only screen and (min-width: 960px) {\n  .competition div.authorInfo {\n    margin-left: 30%;\n    width: 50%;\n  }\n\n  .competition div.authorDetails{\n    padding-top: 5%;\n  }\n}\n", ""]);
+	
+	// exports
+
+
+/***/ }),
+/* 534 */
 /*!************************!*\
   !*** ./tooManyReqs.js ***!
   \************************/
@@ -47099,7 +47434,7 @@
 	exports.default = TooManyReqs;
 
 /***/ }),
-/* 533 */
+/* 535 */
 /*!*******************!*\
   !*** ./policy.js ***!
   \*******************/
@@ -47157,7 +47492,7 @@
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      window.scrollTo(0, 0);
-	      document.title = window.getString("policy") + " -" + window.getString("companyPromo");
+	      document.title = window.getString("policy") + " - " + window.getString("companyPromo");
 	      _analytics2.default.sendPageView('policy');
 	      window.onbeforeunload = function () {
 	        _analytics2.default.sendEvent('Policy', 'close', 'policy');
