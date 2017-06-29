@@ -38363,64 +38363,55 @@
 	        background: 'url(' + _like2.default + ') no-repeat center',
 	        backgroundSize: 'cover'
 	      };
-	
 	      return _react2.default.createElement(
-	        'div',
-	        null,
+	        'ul',
+	        { className: 'share' },
 	        _react2.default.createElement(
-	          'ul',
-	          { className: 'share' },
+	          'li',
+	          { onClick: this.shareClick },
 	          _react2.default.createElement(
-	            'li',
-	            { onClick: this.likeClick },
-	            _react2.default.createElement('div', { style: likeStyle })
+	            FacebookShareButton,
+	            {
+	              url: shareUrl,
+	              title: title,
+	              picture: pic,
+	              className: 'Demo__some-network__share-button' },
+	            _react2.default.createElement(FacebookIcon, {
+	              size: size,
+	              round: true })
 	          )
 	        ),
 	        _react2.default.createElement(
-	          'ul',
-	          { className: 'share' },
+	          'li',
+	          { onClick: this.shareClick },
 	          _react2.default.createElement(
-	            'li',
-	            { onClick: this.shareClick },
-	            _react2.default.createElement(
-	              FacebookShareButton,
-	              {
-	                url: shareUrl,
-	                title: title,
-	                picture: pic,
-	                className: 'Demo__some-network__share-button' },
-	              _react2.default.createElement(FacebookIcon, {
-	                size: size,
-	                round: true })
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'li',
-	            { onClick: this.shareClick },
-	            _react2.default.createElement(
-	              TwitterShareButton,
-	              {
-	                url: shareUrl,
-	                title: title,
-	                className: 'Demo__some-network__share-button' },
-	              _react2.default.createElement(TwitterIcon, {
-	                size: size,
-	                round: true })
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'li',
-	            { onClick: this.shareClick },
-	            _react2.default.createElement(
-	              GooglePlusShareButton,
-	              {
-	                url: shareUrl,
-	                className: 'Demo__some-network__share-button' },
-	              _react2.default.createElement(GooglePlusIcon, {
-	                size: size,
-	                round: true })
-	            )
+	            TwitterShareButton,
+	            {
+	              url: shareUrl,
+	              title: title,
+	              className: 'Demo__some-network__share-button' },
+	            _react2.default.createElement(TwitterIcon, {
+	              size: size,
+	              round: true })
 	          )
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          { onClick: this.shareClick },
+	          _react2.default.createElement(
+	            GooglePlusShareButton,
+	            {
+	              url: shareUrl,
+	              className: 'Demo__some-network__share-button' },
+	            _react2.default.createElement(GooglePlusIcon, {
+	              size: size,
+	              round: true })
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          { onClick: this.likeClick },
+	          _react2.default.createElement('div', { style: likeStyle })
 	        )
 	      );
 	    }
