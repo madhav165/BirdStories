@@ -53,8 +53,7 @@ class Competition extends Component {
 
         <ul className="characters">
           <li className="character">
-            <div className="storyName">మొదటి బహుమతి</div>
-            <div className="storyName">దొంగ దెబ్బ</div>
+            <div className="storyName award">మొదటి బహుమతి</div>
             <div className="storyDetails">
               <Link to={linkObj1} className="authorClick">
                 <div className="storyName">దొంగ దెబ్బ</div>
@@ -73,34 +72,36 @@ class Competition extends Component {
           <li className="character">
             <div className="storyName award">రెండవ బహుమతి</div>
             <div className="storyDetails">
-            <div className="storyName">ముత్యాల రాజు  - మాయా ఉంగరం</div>
-           ఇంకో ఏడాది లో రాజు కావాల్సిన వాడు. మిగతా అన్ని విద్యలలో ఆరితెరినా కూడా తనకి చేతి బొటన వేలు లేని కారణంగా యుద్ధ విద్యలు నేర్చుకోలేకపోతాడు.
-          </li>
-          <li className="character">
-           <span className="highlight">ఖైది: </span>20-32 సంవత్సరాల మధ్యలో ఉండే అతి ముఖ్యమైన యవ్వన దశ మొత్తం జైలులో గడిపిన 32 ఏళ్ళ యువకుడు. ఎంతో జాలి గుణం కలవాడు. ఒక మెకానిక్
-            షెడ్ లో పనిచేస్తూ, సమాజం తనపై చూపించే వివక్షని సానుకూల దృక్పథంతో ఎదుర్కొంటూ, పోగొట్టుకున్న తన కుటుంబాన్ని తలచుకుంటూ జీవిస్తూ ఉంటాడు.
+              <Link to={linkObj2} className="authorClick">
+                <div className="storyName">ముత్యాల రాజు  - మాయా ఉంగరం</div>
+                <img className="coverImage" src="https://s3.ap-south-1.amazonaws.com/bsstory/satyavathi/mayaungaram/cover.jpg"/>
+              </Link>
+              <div className="authorInfo">
                 <img src="https://s3.ap-south-1.amazonaws.com/bsstory/satyavathi/profile.jpg" className="winnerPhoto"/>
-                <div>Author: Satyavathi Dinavahi</div>
-                <div>Prize money: ₹7,000</div>
-                <a href="https://www.sukatha.com/author/satyavathi">Details about Satyavathi Dinavahi</a>
-          </li>
-          <li className="character">
-           <span className="highlight">రాజకీయ నాయకుడు: </span>లంచగొండి. కానీ బుర్ర తక్కువ వాడు. తన అబద్ధాలు పలు మార్లు
-            బహిరంగంగానే తేటతెల్లం అయినా కూడా తన పధ్ధతిలోనే అవివేకంగా ఉంటూ ఉంటాడు.
+                <div className="authorDetails">
+                  <div>Satyavathi Dinavahi</div>
+                  <div>Prize money ₹7,000</div>
                   <Link to="/author/satyavathi"><div className="authorClick">About author</div></Link>
                 </div>
               </div>
-           <span className="highlight">ఇద్దరు పిల్లలున్న ఒక గృహిణి: </span>తన స్నేహితులతో కలిసి ఒక బిజినెస్ లో డబ్బులు పెట్టుబడి పెట్టు అంత పోగొట్టుకుని కష్టాలలో పడుతుంది.
-            <div className="storyName">సమిధ</div>
-            <div className="storyDetails">
-           <span className="highlight">స్కూల్ విద్యార్ధి: </span>తోటి విద్యార్థుల కన్నా చాలా తెలివైన వాడు/అమ్మాయి. ఎపుడూ ఏదో కొత్త విషయం తెలుసుకోవాలన్న ఆసక్తి.
-          <li className="character">
-           <span className="highlight">మిలిటరీ ఆఫీసర్: </span>32 ఏళ్ళు. ఇంకా పెళ్లి కాలేదు.
-            సైన్యం లో ఫస్ట్ లెఫ్టనెంట్. కండబలం, బుద్ధిబలం, దూకుడు ఉన్న వ్యక్తి. ఆడవాళ్లన్నా, పాకిస్తాన్ అన్నా ద్వేషం. పిల్లలు, ప్రకృతి, పల్లెటూరు అంటే మహా ఇష్టం.
-                <div>Prize money: ₹3,000</div>
+            </div>
           </li>
           <li className="character">
-           <span className="highlight">M.B.B.S విద్యార్ధి: </span>తెలివితేటలు, పట్టుదల, డాక్టర్ అయ్యి వీలైనంతమంది ప్రాణాలు కాపాడాలి అన్న
+            <div className="storyName award">మూడవ బహుమతి</div>
+
+            <div className="storyDetails">
+              <Link to={linkObj3} className="authorClick">
+                <div className="storyName">సమిధ</div>
+                <img className="coverImage" src="https://s3.ap-south-1.amazonaws.com/bsstory/luckysri/samidha/cover.jpg"/>
+              </Link>
+              <div className="authorInfo">
+                <img src="https://s3.ap-south-1.amazonaws.com/bsstory/luckysri/profile.jpg" className="winnerPhoto"/>
+                <div className="authorDetails">
+                  <div>Srinivasa Raju Uppalapati</div>
+                  <div>Prize money ₹3,000</div>
+                  <Link to="/author/luckysri"><div className="authorClick">About author</div></Link>
+                </div>
+              </div>
             </div>
           </li>
         </ul>
