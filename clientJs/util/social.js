@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import like from '../img/like.png';
+import styles from '../css/socialIcons.css';
 
 import {
   ShareButtons,
@@ -52,6 +53,10 @@ class Share extends Component {
       backgroundSize:'cover'
     }
     return (
+      <div className="socialIcons">
+      <ul className="share">
+          <li onClick={this.likeClick} ><div style={likeStyle} ></div></li>
+      </ul>
       <ul className="share">
 
         <li onClick={this.shareClick} >
@@ -86,8 +91,8 @@ class Share extends Component {
               round />
           </GooglePlusShareButton>
         </li>
-        <li onClick={this.likeClick} ><div style={likeStyle} ></div></li>
       </ul>
+      </div>
     );
   }
 
