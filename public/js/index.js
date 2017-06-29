@@ -38365,54 +38365,62 @@
 	      };
 	
 	      return _react2.default.createElement(
-	        'ul',
-	        { className: 'share' },
+	        'div',
+	        null,
 	        _react2.default.createElement(
-	          'li',
-	          { onClick: this.shareClick },
+	          'ul',
+	          { className: 'share' },
 	          _react2.default.createElement(
-	            FacebookShareButton,
-	            {
-	              url: shareUrl,
-	              title: title,
-	              picture: pic,
-	              className: 'Demo__some-network__share-button' },
-	            _react2.default.createElement(FacebookIcon, {
-	              size: size,
-	              round: true })
+	            'li',
+	            { onClick: this.likeClick },
+	            _react2.default.createElement('div', { style: likeStyle })
 	          )
 	        ),
 	        _react2.default.createElement(
-	          'li',
-	          { onClick: this.shareClick },
+	          'ul',
+	          { className: 'share' },
 	          _react2.default.createElement(
-	            TwitterShareButton,
-	            {
-	              url: shareUrl,
-	              title: title,
-	              className: 'Demo__some-network__share-button' },
-	            _react2.default.createElement(TwitterIcon, {
-	              size: size,
-	              round: true })
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'li',
-	          { onClick: this.shareClick },
+	            'li',
+	            { onClick: this.shareClick },
+	            _react2.default.createElement(
+	              FacebookShareButton,
+	              {
+	                url: shareUrl,
+	                title: title,
+	                picture: pic,
+	                className: 'Demo__some-network__share-button' },
+	              _react2.default.createElement(FacebookIcon, {
+	                size: size,
+	                round: true })
+	            )
+	          ),
 	          _react2.default.createElement(
-	            GooglePlusShareButton,
-	            {
-	              url: shareUrl,
-	              className: 'Demo__some-network__share-button' },
-	            _react2.default.createElement(GooglePlusIcon, {
-	              size: size,
-	              round: true })
+	            'li',
+	            { onClick: this.shareClick },
+	            _react2.default.createElement(
+	              TwitterShareButton,
+	              {
+	                url: shareUrl,
+	                title: title,
+	                className: 'Demo__some-network__share-button' },
+	              _react2.default.createElement(TwitterIcon, {
+	                size: size,
+	                round: true })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            { onClick: this.shareClick },
+	            _react2.default.createElement(
+	              GooglePlusShareButton,
+	              {
+	                url: shareUrl,
+	                className: 'Demo__some-network__share-button' },
+	              _react2.default.createElement(GooglePlusIcon, {
+	                size: size,
+	                round: true })
+	            )
 	          )
-	        ),
-	        _react2.default.createElement(
-	          'li',
-	          { onClick: this.likeClick },
-	          _react2.default.createElement('div', { style: likeStyle })
 	        )
 	      );
 	    }
@@ -46148,10 +46156,9 @@
 	        )
 	      );
 	
-	      // if(!this.state.imageStatus){
-	      //   img = ""
-	      // }
-	
+	      if (!this.state.imageStatus) {
+	        img = "";
+	      }
 	
 	      var storiesDivison = _react2.default.createElement(
 	        'div',
@@ -47186,12 +47193,17 @@
 	                    'Prize money \u20B915,000'
 	                  ),
 	                  _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    '\u0C15\u0C25\u0C32\u0C4B \u0C35\u0C3E\u0C21\u0C3F\u0C28 \u0C2A\u0C24\u0C4D\u0C30\u0C32\u0C41: 1. \u0C32\u0C46\u0C2B\u0C4D\u0C1F\u0C28\u0C46\u0C02\u0C1F\u0C4D: \u0C06\u0C21\u0C35\u0C3E\u0C33\u0C4D\u0C32\u0C02\u0C1F\u0C47 \u0C15\u0C4B\u0C2A\u0C02, \u0C2A\u0C3E\u0C15\u0C3F\u0C38\u0C4D\u0C24\u0C3E\u0C28\u0C4D \u0C05\u0C02\u0C1F\u0C47 \u0C26\u0C4D\u0C35\u0C47\u0C37\u0C02. 2. \u0C39\u0C4B\u0C1F\u0C32\u0C4D \u0C2F\u0C1C\u0C2E\u0C3E\u0C28\u0C3F: \u0C2E\u0C41\u0C38\u0C4D\u0C32\u0C3F\u0C02 \u0C2E\u0C24\u0C38\u0C4D\u0C24\u0C41\u0C21\u0C41, \u0C38\u0C30\u0C3F\u0C39\u0C26\u0C4D\u0C26\u0C41 \u0C17\u0C4A\u0C21\u0C35\u0C32\u0C4D\u0C32\u0C4B \u0C39\u0C4B\u0C1F\u0C32\u0C4D \u0C15\u0C42\u0C32\u0C3F\u0C2A\u0C4B\u0C24\u0C41\u0C02\u0C26\u0C47\u0C2E\u0C4B \u0C05\u0C28\u0C3F \u0C2D\u0C2F\u0C02\u0C24\u0C4B \u0C09\u0C28\u0C4D\u0C28\u0C3E\u0C21\u0C41.'
+	                  ),
+	                  _react2.default.createElement(
 	                    _reactRouter.Link,
 	                    { to: '/author/rammohan' },
 	                    _react2.default.createElement(
 	                      'div',
 	                      { className: 'authorClick' },
-	                      'About author'
+	                      'About Author'
 	                    )
 	                  )
 	                )
@@ -47237,12 +47249,17 @@
 	                    'Prize money \u20B97,000'
 	                  ),
 	                  _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    '\u0C15\u0C25\u0C32\u0C4B \u0C35\u0C3E\u0C21\u0C3F\u0C28 \u0C2A\u0C24\u0C4D\u0C30\u0C32\u0C41: 1. \u0C09\u0C02\u0C17\u0C30\u0C02: \u0C12\u0C15 \u0C2E\u0C3E\u0C2F\u0C3E \u0C09\u0C02\u0C17\u0C30\u0C02. \u0C15\u0C4B\u0C30\u0C41\u0C15\u0C41\u0C28\u0C4D\u0C28\u0C26\u0C3F \u0C07\u0C38\u0C4D\u0C24\u0C41\u0C02\u0C26\u0C3F, \u0C15\u0C3E\u0C28\u0C40 \u0C07\u0C1A\u0C4D\u0C1A\u0C3F\u0C28 \u0C2A\u0C4D\u0C30\u0C24\u0C3F \u0C26\u0C3E\u0C28\u0C3F\u0C15\u0C3F \u0C2C\u0C26\u0C41\u0C32\u0C41\u0C17\u0C3E \u0C0E\u0C26\u0C4B \u0C12\u0C15\u0C1F\u0C3F \u0C24\u0C40\u0C38\u0C41\u0C15\u0C41\u0C02\u0C1F\u0C41\u0C02\u0C26\u0C3F. 2. \u0C30\u0C3E\u0C1C\u0C15\u0C40\u0C2F \u0C28\u0C3E\u0C2F\u0C15\u0C41\u0C21\u0C41: \u0C32\u0C02\u0C1A\u0C17\u0C4A\u0C02\u0C21\u0C3F, \u0C05\u0C2C\u0C26\u0C4D\u0C27\u0C3E\u0C32 \u0C15\u0C4B\u0C30\u0C41. \u0C2C\u0C41\u0C30\u0C4D\u0C30 \u0C24\u0C15\u0C4D\u0C15\u0C41\u0C35 \u0C35\u0C3E\u0C21\u0C41.'
+	                  ),
+	                  _react2.default.createElement(
 	                    _reactRouter.Link,
 	                    { to: '/author/satyavathi' },
 	                    _react2.default.createElement(
 	                      'div',
 	                      { className: 'authorClick' },
-	                      'About author'
+	                      'About Author'
 	                    )
 	                  )
 	                )
@@ -47288,12 +47305,17 @@
 	                    'Prize money \u20B93,000'
 	                  ),
 	                  _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    '\u0C15\u0C25\u0C32\u0C4B \u0C35\u0C3E\u0C21\u0C3F\u0C28 \u0C2A\u0C24\u0C4D\u0C30\u0C32\u0C41: 1. \u0C32\u0C46\u0C2B\u0C4D\u0C1F\u0C28\u0C46\u0C02\u0C1F\u0C4D: \u0C06\u0C21\u0C35\u0C3E\u0C33\u0C4D\u0C32\u0C02\u0C1F\u0C47 \u0C15\u0C4B\u0C2A\u0C02, \u0C2A\u0C3E\u0C15\u0C3F\u0C38\u0C4D\u0C24\u0C3E\u0C28\u0C4D \u0C05\u0C02\u0C1F\u0C47 \u0C26\u0C4D\u0C35\u0C47\u0C37\u0C02. 2. \u0C39\u0C4B\u0C1F\u0C32\u0C4D \u0C2F\u0C1C\u0C2E\u0C3E\u0C28\u0C3F: \u0C2E\u0C41\u0C38\u0C4D\u0C32\u0C3F\u0C02 \u0C2E\u0C24\u0C38\u0C4D\u0C24\u0C41\u0C21\u0C41, \u0C38\u0C30\u0C3F\u0C39\u0C26\u0C4D\u0C26\u0C41 \u0C17\u0C4A\u0C21\u0C35\u0C32\u0C4D\u0C32\u0C4B \u0C39\u0C4B\u0C1F\u0C32\u0C4D \u0C15\u0C42\u0C32\u0C3F\u0C2A\u0C4B\u0C24\u0C41\u0C02\u0C26\u0C47\u0C2E\u0C4B \u0C05\u0C28\u0C3F \u0C2D\u0C2F\u0C02\u0C24\u0C4B \u0C09\u0C28\u0C4D\u0C28\u0C3E\u0C21\u0C41.'
+	                  ),
+	                  _react2.default.createElement(
 	                    _reactRouter.Link,
 	                    { to: '/author/luckysri' },
 	                    _react2.default.createElement(
 	                      'div',
 	                      { className: 'authorClick' },
-	                      'About author'
+	                      'About Author'
 	                    )
 	                  )
 	                )

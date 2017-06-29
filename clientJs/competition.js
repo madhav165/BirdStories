@@ -64,7 +64,8 @@ class Competition extends Component {
                 <div className="authorDetails">
                   <div>Koilada Rammohan Rao</div>
                   <div>Prize money ₹15,000</div>
-                  <Link to="/author/rammohan"><div className="authorClick">About author</div></Link>
+                  <div>కథలో వాడిన పత్రలు: 1. లెఫ్టనెంట్: ఆడవాళ్లంటే కోపం, పాకిస్తాన్ అంటే ద్వేషం. 2. హోటల్ యజమాని: ముస్లిం మతస్తుడు, సరిహద్దు గొడవల్లో హోటల్ కూలిపోతుందేమో అని భయంతో ఉన్నాడు.</div>
+                  <Link to="/author/rammohan"><div className="authorClick">About Author</div></Link>
                 </div>
               </div>
             </div>
@@ -81,7 +82,8 @@ class Competition extends Component {
                 <div className="authorDetails">
                   <div>Satyavathi Dinavahi</div>
                   <div>Prize money ₹7,000</div>
-                  <Link to="/author/satyavathi"><div className="authorClick">About author</div></Link>
+                  <div>కథలో వాడిన పత్రలు: 1. ఉంగరం: ఒక మాయా ఉంగరం. కోరుకున్నది ఇస్తుంది, కానీ ఇచ్చిన ప్రతి దానికి బదులుగా ఎదో ఒకటి తీసుకుంటుంది. 2. రాజకీయ నాయకుడు: లంచగొండి, అబద్ధాల కోరు. బుర్ర తక్కువ వాడు.</div>
+                  <Link to="/author/satyavathi"><div className="authorClick">About Author</div></Link>
                 </div>
               </div>
             </div>
@@ -99,7 +101,8 @@ class Competition extends Component {
                 <div className="authorDetails">
                   <div>Srinivasa Raju Uppalapati</div>
                   <div>Prize money ₹3,000</div>
-                  <Link to="/author/luckysri"><div className="authorClick">About author</div></Link>
+                  <div>కథలో వాడిన పత్రలు: 1. లెఫ్టనెంట్: ఆడవాళ్లంటే కోపం, పాకిస్తాన్ అంటే ద్వేషం. 2. హోటల్ యజమాని: ముస్లిం మతస్తుడు, సరిహద్దు గొడవల్లో హోటల్ కూలిపోతుందేమో అని భయంతో ఉన్నాడు.</div>
+                  <Link to="/author/luckysri"><div className="authorClick">About Author</div></Link>
                 </div>
               </div>
             </div>

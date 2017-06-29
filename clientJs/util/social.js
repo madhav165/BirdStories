@@ -53,6 +53,10 @@ class Share extends Component {
     }
 
     return (
+      <div>
+      <ul className="share">
+        <li onClick={this.likeClick} ><div style={likeStyle} ></div></li>
+      </ul>
       <ul className="share">
 
         <li onClick={this.shareClick} >
@@ -87,8 +91,8 @@ class Share extends Component {
               round />
           </GooglePlusShareButton>
         </li>
-        <li onClick={this.likeClick} ><div style={likeStyle} ></div></li>
       </ul>
+      </div>
     );
   }
 

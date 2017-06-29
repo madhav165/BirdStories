@@ -44,9 +44,9 @@ class Home extends Component {
 
     var img = <Link to="/competition"> <div className="adImage">‘పాత్రకి జీవం పోయండి’ కథల పోటిలో బహుమతి గెలుచుకున్న కథల కోసం ఇక్కడ క్లిక్ చేయండి.<img src="touch.png" className="adIcon"></img></div></Link>
 
-    // if(!this.state.imageStatus){
-    //   img = ""
-    // }
+    if(!this.state.imageStatus){
+      img = ""
+    }
 
 
     var storiesDivison = <div className="homeStories"><Stories location={this.props.location}/></div>
