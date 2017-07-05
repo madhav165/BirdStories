@@ -1,7 +1,7 @@
 'use strict';
 
 import React,{Component} from 'react';
-import  StoryItem from './storyItemView';
+import StoryItem from './storyItemView';
 import styles from '../css/stories.css';
 import Loader from '../util/loading';
 

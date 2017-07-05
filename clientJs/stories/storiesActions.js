@@ -1,5 +1,5 @@
 'use strict';
-import  Constants from './storiesConstants';
+import Constants from './storiesConstants';
 import Server from '../util/server';
 import SA from '../util/analytics';
 
