@@ -58,4 +58,5 @@ const conn = {
   getDocClient:getAwsDocClient,
   authorize:verifyAccess
 }
+
 module.exports = conn;
